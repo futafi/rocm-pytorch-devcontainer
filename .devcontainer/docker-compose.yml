@@ -1,0 +1,24 @@
+version: '2'
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rocm-jupyter-pytorch
+    volumes:
+      - ../:/notebook
+      - ~/.config/gh/:/root/.config/gh:ro
+    environment:
+      HSA_OVERRIDE_GFX_VERSION: 9.0.0
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    ipc: host
+    group_add:
+      - video
+    devices:
+      - "/dev/kfd:/dev/kfd"
+      - "/dev/dri:/dev/dri"
+    network_mode: "host"
+    tty: true
