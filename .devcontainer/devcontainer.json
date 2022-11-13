@@ -11,14 +11,13 @@
         "ms-toolsai.jupyter-keymap",
         "ms-toolsai.jupyter-renderers",
         "ms-vscode.makefile-tools",
-        "ms-python.python",
         "Gruntfuggly.todo-tree",
-        "vscodevim.vim"
+        "vscodevim.vim",
+        "ms-python.python"
       ]
     }
   },
   "features": {
-    "git": "latest",
     "github-cli": "latest"
   },
   "workspaceFolder": "/notebook",

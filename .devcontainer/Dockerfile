@@ -8,7 +8,11 @@ RUN apt update -y && \
 	htop \
 	curl \
 	wget \
-	vim
+	vim \
+	git
+
+
+RUN conda update conda -y && conda update --all -y
 
 RUN conda install \
 	ipykernel 
