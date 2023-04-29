@@ -11,13 +11,18 @@
         "ms-toolsai.jupyter-keymap",
         "ms-toolsai.jupyter-renderers",
         "ms-vscode.makefile-tools",
+        "ms-python.python",
         "Gruntfuggly.todo-tree",
         "vscodevim.vim",
-        "ms-python.python"
+        "mutantdino.resourcemonitor",
+        "eamodio.gitlens",
+        "GitHub.copilot-labs",
+        "GitHub.copilot"
       ]
     }
   },
   "features": {
+    "git": "latest",
     "github-cli": "latest"
   },
   "workspaceFolder": "/notebook",
