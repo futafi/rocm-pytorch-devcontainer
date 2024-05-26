@@ -1,4 +1,4 @@
-FROM rocm/pytorch:rocm5.4.3_ubuntu20.04_py3.8_pytorch_1.10.1
+FROM rocm/pytorch:rocm6.1.1_ubuntu20.04_py3.9_pytorch_1.13.1
 
 
 ENV HSA_OVERRIDE_GFX_VERSION=9.0.0
@@ -10,7 +10,9 @@ RUN apt update -y && \
 	wget \
 	vim
 
-RUN /opt/conda/bin/pip install --upgrade --force-reinstall torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.4.2
+RUN /opt/conda/bin/pip install torchaudio torchao --index-url https://download.pytorch.org/whl/nightly/rocm6.1/
+# Failed to install
+# torchmetrics torchtext
 
 RUN conda install \
 	ipykernel \
