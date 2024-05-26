@@ -10,7 +10,7 @@ RUN apt update -y && \
 	wget \
 	vim
 
-RUN /opt/conda/bin/pip install torchaudio torchao --index-url https://download.pytorch.org/whl/nightly/rocm6.1/
+RUN /opt/conda/bin/pip install --upgrade torch torchvision torchaudio torchao --index-url https://download.pytorch.org/whl/nightly/rocm6.1/
 # Failed to install
 # torchmetrics torchtext
 
